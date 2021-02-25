@@ -10,11 +10,11 @@ public interface UserService {
 
     void dropUsersTable();
 
-    void saveUser(String name, String lastName, byte age) throws SQLException;
+    void saveUser(String name, String lastName, byte age) ;
 
     void removeUserById(long id);
 
-    List<User> getAllUsers() throws SQLException;
+    List<User> getAllUsers() ;
 
     void cleanUsersTable();
 }

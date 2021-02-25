@@ -23,7 +23,7 @@ public class UserServiceImpl  implements UserService {
     }
 
     // добавление USER  в таблицу
-    public void saveUser(String name, String lastName, byte age) throws SQLException {
+    public void saveUser(String name, String lastName, byte age) {
         userDaoJDBC.saveUser(name,lastName,age);
 
 
