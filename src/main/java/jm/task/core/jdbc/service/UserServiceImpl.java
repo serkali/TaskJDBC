@@ -1,16 +1,12 @@
 package jm.task.core.jdbc.service;
 
-import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.util.Util;
 
-import java.sql.SQLException;
 import java.util.List;
 
-public class UserServiceImpl  implements UserService {
-  UserDaoHibernateImpl dao = new UserDaoHibernateImpl();
+public class UserServiceImpl implements UserService {
+    private UserDaoHibernateImpl dao = new UserDaoHibernateImpl();
 
 
     //создание таблицы
@@ -20,13 +16,13 @@ public class UserServiceImpl  implements UserService {
 
     //удаление таблицы
     public void dropUsersTable() {
-      dao.dropUsersTable();
+        dao.dropUsersTable();
 
     }
 
     // добавление USER  в таблицу
     public void saveUser(String name, String lastName, byte age) {
-        dao.saveUser(name,lastName,age);
+        dao.saveUser(name, lastName, age);
 
 
     }
